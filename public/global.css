@@ -1,60 +1,107 @@
 /* Estilos Generales */
 .main-container {
-	margin: 20px;
+  margin: 20px;
+}
+
+body {
+  padding-bottom: 50px;
+  background: rgb(251, 136, 136);
+  background: linear-gradient(
+    90deg,
+    rgba(251, 136, 136, 1) 0%,
+    #ff3d00 0%,
+    rgba(0, 0, 0, 1) 100%,
+    rgba(255, 255, 255, 1) 100%
+  );
+}
+
+/* Animaciones */
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.fast {
+  -webkit-animation-duration: 0.4s;
+  animation-duration: 0.4s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  
-  body {
-	padding-bottom: 50px;
-	background: rgb(251,136,136);
-	background: linear-gradient(90deg, rgba(251,136,136,1) 0%, #ff3d00 0%, rgba(0,0,0,1) 100%, rgba(255,255,255,1) 100%);    
+  to {
+    opacity: 1;
   }
-  
-  /* Animaciones */
-  .animated {
-	-webkit-animation-duration: 1s;
-	animation-duration: 1s;
-	-webkit-animation-fill-mode: both;
-	animation-fill-mode: both;
-  }
-  
-  .fast {
-	-webkit-animation-duration: 0.4s;
-	animation-duration: 0.4s;
-	-webkit-animation-fill-mode: both;
-	animation-fill-mode: both;
-  }
-  
-  @keyframes fadeIn {
-	from {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-	}
-  }
-  
-  .fadeIn {
-	animation-name: fadeIn;
-  }
-  .btn {
-	flex: 1 1 auto;
-	padding: 30px;
-	text-align: center;
-	text-transform: uppercase;
-	transition: 0.5s;
-	background-size: 200% auto;
-	color: white;
-	box-shadow: 0 0 20px #eee;
-	border-radius: 10px;
-	border: 1px solid #ff3d00 !important;
-  }
-  
-  .btn-4 {
-	background-image: linear-gradient(to right, #e2ac9b 0%, #d39582 51%, #ff3d00 100%);
-  }
-  
-  .btn:hover {
-	background-position: right center;
-	/* change the direction of the change here */
-  }
-  
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+}
+
+/* Botones */
+.btn {
+  padding: 12px 30px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  border: 1px solid #ff3d00 !important;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.btn-4 {
+  background-image: linear-gradient(to right, #e2ac9b 0%, #d39582 51%, #ff3d00 100%);
+}
+
+.btn:hover {
+  background-position: right center;
+  /* change the direction of the change here */
+}
+
+/* Botón que ocupa todo el ancho de la card */
+.btn-full-width {
+  width: 100%;
+  margin-top: 8px;
+}
+
+/* Clase para truncar texto a 3 líneas con puntos suspensivos */
+.card-text-truncate {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-height: 4.5em;
+  line-height: 1.5em;
+}
+
+/* Variantes para diferentes números de líneas */
+.card-text-truncate-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-height: 3em;
+  line-height: 1.5em;
+}
+
+.card-text-truncate-4 {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-height: 6em;
+  line-height: 1.5em;
+}
